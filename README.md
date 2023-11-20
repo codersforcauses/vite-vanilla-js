@@ -1,39 +1,146 @@
-# Getting Started with JavaScript
+# Getting Started with JavaScript for Complete Beginners
 
-## 1st thing to do after cloning to your computer
+Welcome to the world of web development! If you're new to JavaScript, follow these steps to set up a basic project on your computer.
 
-## Recommended IDE and Extension
+## Step 1: Install a Text Editor
 
--   [VSCode](https://code.visualstudio.com/)
+Choose a code editor to write your HTML, CSS, and JavaScript code. A recommended choice is:
 
--   Prettier - Code formatter
+-   [Visual Studio Code (VSCode)](https://code.visualstudio.com/)
 
-## Project Setup
+## Step 2: Install Git, GitHub CLI, Node.js and Node Package Manager (npm)
 
-### Install Node.js and Node Package Manager
+Git is a version control system that helps you track changes in your code. Follow these steps to install Git:
 
-Choose the LTS version.
+1.  Download and install Git from [Git official website](https://git-scm.com/downloads).
 
--   [Node.js + NPM](https://nodejs.org/en/download)
+2.  Verify the installation by running the following command in your terminal:
 
-```sh
-npm install
+    ```sh
+    git --version
+    ```
+
+    You should see the Git version printed in the terminal, confirming a successful installation.
+
+GitHub CLI allows you to interact with GitHub from the command line. Follow these steps:
+
+1.  Install GitHub CLI on macOS, Windows, or Linux. For more information, see [Installation](https://github.com/cli/cli#installation) in the GitHub CLI repository.
+
+2.  Verify the installation by running the following command in your terminal:
+
+    ```sh
+    gh --version
+    ```
+
+    You should see the GitHub CLI version printed in the terminal, indicating a successful installation.
+
+3.  Authenticate with GitHub by running this command from your terminal:
+
+    ```sh
+    gh auth login
+    ```
+
+4.  Follow the on-screen prompts.
+
+    > GitHub CLI automatically stores your Git credentials for you when you choose HTTPS as your preferred protocol for Git operations and answer "yes" to the prompt asking if you would like to authenticate to Git with your GitHub credentials. This can be useful as it allows you to use git push, git pull, and so on, without needing to set up a separate credential manager or use SSH.
+
+Node.js allows you to run JavaScript on your machine, and npm helps manage packages (libraries and tools). Follow these steps:
+
+1. Download and install the LTS version of Node.js and npm from [Node.js website](https://nodejs.org/en/download).
+
+2. Verify the installation by opening a terminal (command prompt) and running the following commands:
+
+    ```sh
+    node -v
+    npm -v
+    ```
+
+    You should see versions printed in the terminal, indicating that Node.js and npm are installed.
+
+## Step 3: Set Up Your Project
+
+1. **Find the URL/CLI:**
+   Look for the "Code" button (usually in green) on the repository page. Click on it, and a dropdown will appear.
+
+2. **Clone the Repository:**
+   Ensure that "GitHub CLI" is selected, and copy the CLI provided. It should look like:
+
+    ```sh
+    gh repo clone codersforcauses/vite-vanilla-js-{year}-{group}`
+    ```
+
+3. **Navigate to Project Directory:**
+   Change your terminal's current directory to the project folder.
+
+    ```sh
+    cd vite-vanilla-js-{year}-{group}
+    ```
+
+4. **Install Dependencies:**
+   Install the project dependencies using npm.
+
+    ```sh
+    npm install
+    ```
+
+## Step 4: Write Your HTML Code
+
+Open the file named `index.html` in the project root directory and write basic HTML:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Your Web Page Title</title>
+        <!-- Link to your CSS file (e.g., styles.css) -->
+        <link rel="stylesheet" href="src/styles.css" />
+    </head>
+    <body>
+        <!-- Your content goes here -->
+        <script src="src/app.js"></script>
+    </body>
+</html>
 ```
 
-### Compile and Hot-Reload for Development
+## Step 5: Write Your JavaScript and CSS Code
 
-```sh
-npm run dev
-```
+In the `src` folder, there are two folders: `js` for JavaScript and `css` for CSS. Write your code in these files.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+-   `src/js/main.js`:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+    ```javascript
+    // Your JavaScript code goes here
+    console.log("Hello, World!");
+    ```
 
-### Compile and Minify for Production
+-   `src/css/styles.css`:
 
-```sh
-npm run build
-```
+    ```css
+    /* Your CSS code goes here */
+    body {
+        font-family: "Arial", sans-serif;
+        background-color: #f0f0f0;
+    }
+    ```
+
+## Step 6: Run Your Project
+
+1. **Development Mode:**
+   Run the following command to compile and hot-reload for development:
+
+    ```sh
+    npm run dev
+    ```
+
+    Open [http://localhost:3000](http://localhost:3000) in your browser to view your project.
+
+2. **Production Mode:**
+   When you're ready to deploy your project, run the following command to compile and minify for production:
+
+    ```sh
+    npm run build
+    ```
+
+Congratulations! You've set up a basic JavaScript project. Experiment with your HTML, CSS, and JavaScript code to build exciting web applications.
