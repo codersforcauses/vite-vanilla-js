@@ -2,21 +2,33 @@
 
 ## Project Setup
 
-### 1. Create Virtual Environment
+### 1. Create Virtual Environment and activate it
 
-```bash
+```sh
 python -m venv ./venv
+```
+
+For Windows:
+
+```sh
+.\venv\Scripts\activate
+```
+
+For Linux/Mac:
+
+```sh
+source ./venv/bin/activate
 ```
 
 ### 2. Install Dependencies
 
-```bash
+```sh
 pip install -r requirements.txt
 ```
 
 ## Running the Server
 
-```bash
+```sh
 uvicorn main:app --reload
 ```
 
@@ -25,18 +37,15 @@ This will start the FastAPI server with automatic reloading enabled.
 ## Project Structure
 
 ```
-server/
-│
-├── api/
-│   ├── __init__.py
-│   ├── your_api_module.py
-│   └── ...
-│
-├── venv/
-│   └── ...
-│
-├── main.py
-└── requirements.txt
+📦server
+ ┣ 📂api
+ ┃ ┣ 📜__init__.py
+ ┃ ┣ 📜get_function.py
+ ┃ ┗ 📜post_function.py
+ ┣ 📜README.md
+ ┣ 📜__init__.py
+ ┣ 📜main.py
+ ┗ 📜requirements.txt
 ```
 
 -   **api/**: This folder is intended for storing your API modules. Create your API modules within this directory.
