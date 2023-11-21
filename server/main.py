@@ -1,3 +1,4 @@
+import os
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
@@ -27,13 +28,14 @@ app.include_router(post_function.router)
 
 
 STATIC_DIR = "../dist/"
-app.mount("/", StaticFiles(directory=STATIC_DIR, html=True), name="index")
 
-index_file = FileResponse(
-    STATIC_DIR + "index.html", headers={"Cache-Control": "no-cache"}
-)
+if os.path.exists(STATIC_DIR):
+    app.mount("/", StaticFiles(directory=STATIC_DIR, html=True), name="index")
 
+    index_file = FileResponse(
+        STATIC_DIR + "index.html", headers={"Cache-Control": "no-cache"}
+    )
 
-@app.get("/", response_class=FileResponse)
-async def index():
-    return index_file
+    @app.get("/", response_class=FileResponse)
+    async def index():
+        return index_file
