@@ -1,6 +1,6 @@
 export async function callApi1() {
     try {
-        const response = await fetch("http://localhost:8000/api/getFunction/");
+        const response = await fetch("http://localhost:8000/api/getFunction");
         const data = await response.json();
         document.getElementById("api1Response").innerText = data.message;
     } catch (error) {
