@@ -125,7 +125,7 @@ In the `src` folder, there are two folders: `js` for JavaScript and `css` for CS
     }
     ```
 
-## Step 6: Run Your Project
+## Step 6: Run Your Frontend Project
 
 1. **Development Mode:**
    Run the following command to compile and hot-reload for development:
@@ -144,3 +144,11 @@ In the `src` folder, there are two folders: `js` for JavaScript and `css` for CS
     ```
 
 Congratulations! You've set up a basic JavaScript project. Experiment with your HTML, CSS, and JavaScript code to build exciting web applications.
+
+Click [here](server/README.md) to set up the server-side of your project.
+
+Once you've set up your project, you can run the frontend and backend simultaneously.
+
+```sh
+npm run dev:all
+```
