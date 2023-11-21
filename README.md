@@ -152,3 +152,10 @@ Once you've set up your project, you can run the frontend and backend simultaneo
 ```sh
 npm run dev:all
 ```
+
+## Recommended Visual Studio Code Extensions
+
+-   Prettier - Code formatter
+-   ESLint (for JavaScript linting)
+-   Thunder Client (for API testing)
+-   GitHub Copilot
