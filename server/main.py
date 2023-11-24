@@ -4,7 +4,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 
-from api import get_function, post_function
+from api import make_move
 
 app = FastAPI()
 
@@ -23,8 +23,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-app.include_router(get_function.router)
-app.include_router(post_function.router)
+app.include_router(make_move.router)
 
 
 STATIC_DIR = "../dist/"

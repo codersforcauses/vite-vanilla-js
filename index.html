@@ -8,32 +8,24 @@
         <title>Vite App</title>
     </head>
     <body>
-        <div id="app">
-            <a href="https://vitejs.dev" target="_blank">
-                <img src="/svg/vite.svg" class="logo" alt="Vite logo" />
-            </a>
-            <a
-                href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
-                target="_blank"
-            >
-                <img
-                    src="/svg/javascript.svg"
-                    class="logo vanilla"
-                    alt="JavaScript logo"
-                />
-            </a>
-            <h1>Hello Vite!</h1>
-            <div class="card">
-                <button id="counter" type="button"></button>
-            </div>
-            <p class="read-the-docs">Click on the Vite logo to learn more</p>
-            <h2>FastAPI API Tester</h2>
-            <h3>GET API</h3>
-            <p id="api1Response"></p>
-            <h3>POST API</h3>
-            <p id="api2Response"></p>
-        </div>
+        <h1>Tic Tac Toe</h1>
+        <form id="ticTacToeForm">
+            <button type="button" onclick="makeMove(0, 0)" id="00"></button>
+            <button type="button" onclick="makeMove(0, 1)" id="01"></button>
+            <button type="button" onclick="makeMove(0, 2)" id="02"></button>
+            <button type="button" onclick="makeMove(1, 0)" id="10"></button>
+            <button type="button" onclick="makeMove(1, 1)" id="11"></button>
+            <button type="button" onclick="makeMove(1, 2)" id="12"></button>
+            <button type="button" onclick="makeMove(2, 0)" id="20"></button>
+            <button type="button" onclick="makeMove(2, 1)" id="21"></button>
+            <button type="button" onclick="makeMove(2, 2)" id="22"></button>
+        </form>
 
-        <script type="module" src="/src/js/main.js"></script>
+        <p id="message">Next turn: X</p>
+        <button type="button" id="reset-button" onclick="resetGame()">
+            Reset Game
+        </button>
+
+        <script src="/src/js/main.js"></script>
     </body>
 </html>
